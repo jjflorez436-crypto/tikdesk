@@ -1,235 +1,162 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="google-site-verification" content="XYtWpMmF-1p4Jhe3xo0bL9ZQG4dIQrrn6PqxidVmCd8" />
-
-  <!-- SEO y meta tags (sin cambios) -->
-  <title>TikDesk – Descargar Videos de TikTok Sin Marca de Agua Gratis</title>
-  <meta name="description" content="Descarga videos de TikTok sin marca de agua gratis y en HD. También descarga videos de Instagram y YouTube. Rápido, sin registro y sin límites. ¡Pruébalo ahora!"/>
-  <meta name="keywords" content="descargar videos tiktok sin marca de agua, bajar videos tiktok gratis, tiktok downloader, descargar tiktok sin watermark, bajar videos instagram gratis, descargar youtube gratis, tikdesk"/>
-  <meta name="author" content="TikDesk"/>
+  <title>TikDesk – Descargar videos de TikTok sin marca de agua gratis</title>
+  <meta name="description" content="Descarga videos de TikTok sin marca de agua gratis y en HD. Sin registro, sin apps. Guarda videos de TikTok en MP4 o MP3 en segundos."/>
+  <meta name="keywords" content="descargar tiktok sin marca de agua, tiktok downloader, descargar videos tiktok gratis, tiktok mp4, tiktok mp3, bajar videos tiktok, tikdesk"/>
   <meta name="robots" content="index, follow"/>
-  <link rel="canonical" href="https://tikdesk.xyz"/>
-
+  <meta property="og:title" content="TikDesk – Descargar TikTok sin marca de agua"/>
+  <meta property="og:description" content="Descarga videos de TikTok sin marca de agua gratis y en HD. Sin registro ni apps."/>
+  <meta property="og:url" content="https://www.tikdesk.xyz"/>
   <meta property="og:type" content="website"/>
-  <meta property="og:url" content="https://tikdesk.xyz"/>
-  <meta property="og:title" content="TikDesk – Descargar Videos de TikTok Sin Marca de Agua Gratis"/>
-  <meta property="og:description" content="Descarga videos de TikTok, Instagram y YouTube sin marca de agua, gratis y en HD. Sin registro ni apps."/>
-  <meta property="og:image" content="https://tikdesk.xyz/og-image.png"/>
-  <meta property="og:locale" content="es_ES"/>
-  <meta property="og:site_name" content="TikDesk"/>
-
-  <meta name="twitter:card" content="summary_large_image"/>
-  <meta name="twitter:url" content="https://tikdesk.xyz"/>
-  <meta name="twitter:title" content="TikDesk – Descargar Videos de TikTok Sin Marca de Agua"/>
-  <meta name="twitter:description" content="Descarga videos de TikTok, Instagram y YouTube sin marca de agua, gratis y en HD."/>
-  <meta name="twitter:image" content="https://tikdesk.xyz/og-image.png"/>
-
+  <link rel="canonical" href="https://www.tikdesk.xyz"/>
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8011531938428739" crossorigin="anonymous"></script>
-
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    :root {
-      --bg: #f7f2ff;           /* Fondo lila claro suave y cálido */
-      --card: #ffffff;
-      --border: #e6d4ff;
-      --accent: #b38cff;       /* Lila principal bonito y equilibrado */
-      --accent2: #6f2dff;      /* Lila oscuro vibrante */
-      --text: #2f1f5f;         /* Lila oscuro elegante para textos */
-      --muted: #5f4a8a;        /* Lila medio suave */
-    }
+```
+:root {
+  --bg: #f8f5ff;
+  --card: #ffffff;
+  --border: #e0bbff;
+  --accent: #a855f7;
+  --accent2: #c026d3;
+  --text: #4c1d95;
+  --muted: #6b21a8;
+}
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      min-height: 100vh;
-    }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
 
-    .bg-blobs { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
-    .blob { position: absolute; border-radius: 50%; filter: blur(130px); opacity: 0.085; }
-    .blob-1 { width: 540px; height: 540px; background: #c8adff; top: -170px; left: -170px; }
-    .blob-2 { width: 420px; height: 420px; background: #b38cff; bottom: -150px; right: -150px; }
-    .blob-3 { width: 340px; height: 340px; background: #d8c0ff; top: 48%; left: 50%; transform: translate(-50%, -50%); }
+.bg-blobs { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+.blob { position: absolute; border-radius: 50%; filter: blur(110px); opacity: 0.10; }
+.blob-1 { width: 500px; height: 500px; background: #c084fc; top: -150px; left: -150px; }
+.blob-2 { width: 380px; height: 380px; background: #a855f7; bottom: -120px; right: -120px; }
+.blob-3 { width: 300px; height: 300px; background: #d8b4fe; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-    .wrapper { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; padding: 0 20px; }
+.wrapper { position: relative; z-index: 1; max-width: 720px; margin: 0 auto; padding: 0 20px; }
 
-    header { display: flex; align-items: center; justify-content: space-between; padding: 28px 0 0; }
-    .logo { 
-      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.85rem;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .logo span { -webkit-text-fill-color: var(--text); }
-    .badge { 
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff; font-size: 0.78rem; font-weight: 500;
-      padding: 6px 14px; border-radius: 9999px;
-    }
+header { display: flex; align-items: center; justify-content: space-between; padding: 28px 0 0; }
+.logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.85rem; background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.logo span { -webkit-text-fill-color: var(--text); }
+.badge { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-size: 0.78rem; font-weight: 500; padding: 6px 14px; border-radius: 9999px; }
 
-    .install-banner { 
-      display: none; align-items: center; justify-content: space-between; gap: 12px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: white; padding: 14px 20px; border-radius: 18px; margin-top: 16px;
-    }
-    .install-banner.visible { display: flex; animation: fadeUp 0.4s ease both; }
-    .install-banner-text { font-size: 0.95rem; font-weight: 500; }
-    .install-banner-text strong { font-weight: 700; }
-    .install-banner-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-    .btn-install { background: white; color: var(--accent2); border: none; padding: 8px 18px; border-radius: 9999px; font-weight: 600; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; }
-    .btn-install:hover { transform: scale(1.04); }
-    .btn-install-close { background: none; border: none; color: rgba(255,255,255,0.85); font-size: 1.25rem; cursor: pointer; line-height: 1; padding: 4px; }
+.hero { text-align: center; padding: 70px 0 50px; }
+.hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: var(--accent); font-size: 0.85rem; font-weight: 500; padding: 7px 18px; border-radius: 9999px; margin-bottom: 28px; }
+.dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 1.8s infinite; }
 
-    .ios-tip { 
-      display: none; align-items: center; gap: 10px;
-      background: rgba(179,140,255,0.10); border: 1px solid rgba(179,140,255,0.3);
-      color: var(--accent2); padding: 12px 18px; border-radius: 16px;
-      margin-top: 16px; font-size: 0.88rem; line-height: 1.5;
-    }
-    .ios-tip.visible { display: flex; animation: fadeUp 0.4s ease both; }
+.hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.1rem, 7vw, 3.4rem); line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 20px; color: #4c1d95; }
+.hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.hero p { color: var(--muted); font-size: 1.05rem; max-width: 480px; margin: 0 auto 32px; }
 
-    .hero { text-align: center; padding: 70px 0 50px; }
-    .hero-eyebrow { 
-      display: inline-flex; align-items: center; gap: 8px;
-      background: rgba(179,140,255,0.12); border: 1px solid rgba(179,140,255,0.3);
-      color: var(--accent); font-size: 0.85rem; font-weight: 500;
-      padding: 7px 18px; border-radius: 9999px; margin-bottom: 28px;
-    }
-    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 1.8s infinite; }
+/* Plataformas */
+.platforms {
+  display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 28px;
+}
+.platform-btn {
+  display: flex; align-items: center; gap: 7px;
+  padding: 9px 18px; border-radius: 9999px;
+  border: 2px solid var(--border); background: white;
+  font-size: 0.88rem; font-weight: 500; color: var(--muted);
+  cursor: pointer; transition: all 0.2s;
+}
+.platform-btn.active, .platform-btn:hover {
+  border-color: var(--accent); background: rgba(168,85,247,0.08); color: var(--accent);
+}
+.platform-btn img { width: 18px; height: 18px; }
 
-    .hero h1 { 
-      font-family: 'Syne', sans-serif; font-weight: 800;
-      font-size: clamp(2.1rem, 7vw, 3.4rem); line-height: 1.05;
-      letter-spacing: -1.5px; margin-bottom: 20px; color: var(--text);
-    }
-    .hero h1 em { 
-      font-style: normal;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
-    .hero p { color: var(--muted); font-size: 1.05rem; max-width: 480px; margin: 0 auto 32px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 28px; padding: 32px 28px; box-shadow: 0 25px 50px -15px rgba(168,85,247,0.15); }
+.input-row { display: flex; gap: 14px; flex-wrap: wrap; }
+.url-input { flex: 1; min-width: 220px; background: #fff; border: 2px solid var(--border); color: var(--text); font-size: 1rem; padding: 16px 20px; border-radius: 18px; outline: none; transition: all 0.3s; }
+.url-input:focus { border-color: var(--accent); box-shadow: 0 0 0 5px rgba(168,85,247,0.18); }
+.url-input::placeholder { color: #9b80b8; }
 
-    .card { 
-      background: var(--card); border: 1px solid var(--border); border-radius: 28px; 
-      padding: 32px 28px; box-shadow: 0 25px 50px -15px rgba(179,140,255,0.15); 
-    }
-    .input-row { display: flex; gap: 14px; flex-wrap: wrap; }
-    .url-input { 
-      flex: 1; min-width: 220px; background: #fff; border: 2px solid var(--border);
-      color: var(--text); font-size: 1rem; padding: 16px 20px; border-radius: 18px;
-      outline: none; transition: all 0.3s; 
-    }
-    .url-input:focus { border-color: var(--accent); box-shadow: 0 0 0 5px rgba(179,140,255,0.18); }
-    .url-input::placeholder { color: #9b80b8; }
+.btn-download {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #fff; font-weight: 600; font-size: 1rem; padding: 16px 28px; border-radius: 18px;
+  cursor: pointer; border: none; white-space: nowrap; display: flex; align-items: center; gap: 10px;
+  box-shadow: 0 10px 25px -5px rgba(168,85,247,0.45); transition: all 0.3s;
+}
+.btn-download:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -5px rgba(168,85,247,0.55); }
 
-    .btn-download { 
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff; font-weight: 600; font-size: 1rem; padding: 16px 28px;
-      border-radius: 18px; cursor: pointer; border: none; white-space: nowrap;
-      display: flex; align-items: center; gap: 10px;
-      box-shadow: 0 10px 25px -5px rgba(179,140,255,0.45); transition: all 0.3s;
-    }
-    .btn-download:hover { transform: translateY(-3px); box-shadow: 0 15px 30px -5px rgba(179,140,255,0.55); }
+.result-area { margin-top: 24px; display: none; }
+.result-area.visible { display: block; animation: fadeUp 0.4s ease both; }
 
-    .result-area { margin-top: 24px; display: none; }
-    .result-area.visible { display: block; animation: fadeUp 0.4s ease both; }
+.video-meta { display: flex; align-items: center; gap: 16px; padding: 16px; background: #f8f5ff; border-radius: 16px; margin-bottom: 20px; }
+.meta-thumb { width: 60px; height: 60px; border-radius: 12px; background-size: cover; background-color: #e0bbff; flex-shrink: 0; }
+.meta-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
+.meta-sub { font-size: 0.82rem; color: var(--muted); }
 
-    .video-meta { 
-      display: flex; align-items: center; gap: 16px; padding: 16px;
-      background: #f0e8ff; border-radius: 16px; margin-bottom: 20px; 
-    }
-    .meta-thumb { width: 60px; height: 60px; border-radius: 12px; background-size: cover; background-color: #e0bbff; flex-shrink: 0; }
-    .meta-title { font-weight: 600; font-size: 0.95rem; margin-bottom: 4px; }
-    .meta-sub { font-size: 0.82rem; color: var(--muted); }
+.platform-tag {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 0.75rem; font-weight: 600; padding: 3px 10px;
+  border-radius: 9999px; margin-bottom: 6px;
+}
+.tag-tiktok { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+.tag-instagram { background: #fdf2f8; color: #9d174d; border: 1px solid #fbcfe8; }
+.tag-youtube { background: #fef2f2; color: #b91c1c; border: 1px solid #fecaca; }
 
-    .result-actions { display: flex; flex-direction: column; gap: 14px; }
-    .btn-download-format {
-      padding: 18px 24px; border-radius: 18px; font-weight: 600; font-size: 1rem;
-      text-align: center; cursor: pointer; border: none; transition: all 0.3s;
-      display: flex; align-items: center; justify-content: center; gap: 10px;
-    }
-    .btn-mp4 { 
-      background: linear-gradient(135deg, var(--accent), var(--accent2)); 
-      color: white; 
-      box-shadow: 0 10px 25px -5px rgba(179,140,255,0.45); 
-    }
-    .btn-mp4:hover { transform: translateY(-3px); }
-    .btn-mp3 { 
-      background: white; 
-      color: var(--text); 
-      border: 2px solid var(--border); 
-    }
-    .btn-mp3:hover { border-color: var(--accent); background: #f8f4ff; }
+.result-actions { display: flex; flex-direction: column; gap: 14px; }
+.btn-download-format {
+  padding: 18px 24px; border-radius: 18px; font-weight: 600; font-size: 1rem;
+  text-align: center; cursor: pointer; border: none; transition: all 0.3s;
+  display: flex; align-items: center; justify-content: center; gap: 10px;
+}
+.btn-mp4 { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: white; box-shadow: 0 10px 25px -5px rgba(168,85,247,0.45); }
+.btn-mp4:hover { transform: translateY(-3px); }
+.btn-mp3 { background: white; color: var(--text); border: 2px solid var(--border); }
+.btn-mp3:hover { border-color: var(--accent); background: #f8f5ff; }
 
-    .status-msg { margin-top: 18px; padding: 16px 20px; border-radius: 16px; font-size: 0.95rem; display: none; }
-    .status-msg.show { display: flex; align-items: center; gap: 10px; }
-    .status-msg.loading { background: rgba(179,140,255,0.1); border: 1px solid rgba(179,140,255,0.25); color: var(--accent); }
-    .status-msg.error { background: rgba(111,45,221,0.1); border: 1px solid rgba(111,45,221,0.25); color: var(--accent2); }
-    .spin { width: 18px; height: 18px; border: 3px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: spin 0.9s linear infinite; flex-shrink: 0; }
+.status-msg { margin-top: 18px; padding: 16px 20px; border-radius: 16px; font-size: 0.95rem; display: none; }
+.status-msg.show { display: flex; align-items: center; gap: 10px; }
+.status-msg.loading { background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: var(--accent); }
+.status-msg.error { background: rgba(192,38,211,0.1); border: 1px solid rgba(192,38,211,0.25); color: var(--accent2); }
+.spin { width: 18px; height: 18px; border: 3px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: spin 0.9s linear infinite; flex-shrink: 0; }
 
-    .supported { text-align: center; margin: 60px 0 50px; }
-    .supported-title { font-size: 0.9rem; color: var(--muted); margin-bottom: 20px; font-weight: 500; }
-    .supported-logos { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
-    .supported-logo {
-      display: flex; flex-direction: column; align-items: center; gap: 8px;
-      padding: 16px 24px; background: white; border: 1px solid var(--border);
-      border-radius: 20px; font-size: 0.82rem; font-weight: 500; color: var(--muted);
-      box-shadow: 0 4px 15px rgba(179,140,255,0.08);
-    }
-    .supported-logo span { font-size: 2rem; }
+/* Plataformas soportadas */
+.supported { text-align: center; margin: 60px 0 50px; }
+.supported-title { font-size: 0.9rem; color: var(--muted); margin-bottom: 20px; font-weight: 500; }
+.supported-logos { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; }
+.supported-logo {
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 16px 24px; background: white; border: 1px solid var(--border);
+  border-radius: 20px; font-size: 0.82rem; font-weight: 500; color: var(--muted);
+  box-shadow: 0 4px 15px rgba(168,85,247,0.08);
+}
+.supported-logo span { font-size: 2rem; }
 
-    .features { margin: 20px 0 70px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
-    .feat-icon { 
-      width: 70px; height: 70px; margin: 0 auto 16px; 
-      display: flex; align-items: center; justify-content: center; 
-      font-size: 2.8rem; border-radius: 50%; background: #ffffff; 
-      box-shadow: 0 10px 30px rgba(179,140,255,0.12); 
-    }
-    .feat-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
-    .feat-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
+.features { margin: 20px 0 70px; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; text-align: center; }
+.feat-icon { width: 70px; height: 70px; margin: 0 auto 16px; display: flex; align-items: center; justify-content: center; font-size: 2.8rem; border-radius: 50%; background: #ffffff; box-shadow: 0 10px 30px rgba(168,85,247,0.12); }
+.feat-title { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+.feat-desc { font-size: 0.9rem; color: var(--muted); line-height: 1.5; }
 
-    .section-title { 
-      font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.8rem; 
-      text-align: center; margin: 70px 0 40px; color: var(--text); 
-    }
+.section-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.8rem; text-align: center; margin: 70px 0 40px; color: #4c1d95; }
 
-    .steps { display: flex; flex-direction: column; gap: 32px; margin-bottom: 70px; }
-    .step { display: flex; gap: 24px; align-items: flex-start; }
-    .step-num { 
-      width: 48px; height: 48px; flex-shrink: 0; 
-      background: linear-gradient(135deg, var(--accent), var(--accent2)); 
-      color: white; border-radius: 50%; 
-      display: flex; align-items: center; justify-content: center; 
-      font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; 
-    }
-    .step-content strong { display: block; font-size: 1.1rem; margin-bottom: 8px; color: var(--text); }
-    .step-content span { font-size: 0.95rem; color: var(--muted); line-height: 1.55; }
+.steps { display: flex; flex-direction: column; gap: 32px; margin-bottom: 90px; }
+.step { display: flex; gap: 24px; align-items: flex-start; }
+.step-num { width: 48px; height: 48px; flex-shrink: 0; background: linear-gradient(135deg, var(--accent), var(--accent2)); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; }
+.step-content strong { display: block; font-size: 1.1rem; margin-bottom: 8px; color: var(--text); }
+.step-content span { font-size: 0.95rem; color: var(--muted); line-height: 1.55; }
 
-    .faq { margin-bottom: 80px; }
-    .faq-item { background: white; border: 1px solid var(--border); border-radius: 18px; padding: 22px 24px; margin-bottom: 14px; }
-    .faq-q { font-weight: 600; font-size: 1rem; color: var(--text); margin-bottom: 8px; }
-    .faq-a { font-size: 0.92rem; color: var(--muted); line-height: 1.55; }
+footer { padding: 60px 0 50px; text-align: center; color: var(--muted); font-size: 0.9rem; border-top: 1px solid var(--border); }
 
-    footer { 
-      padding: 60px 0 50px; text-align: center; 
-      color: var(--muted); font-size: 0.9rem; 
-      border-top: 1px solid var(--border); 
-    }
+@keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes fadeUp { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
+```
 
-    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    @keyframes fadeUp { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
   </style>
-  <link rel="manifest" href="/manifest.json">
-  <script>if("serviceWorker" in navigator){navigator.serviceWorker.register("/sw.js")}</script>
 </head>
 <body>
 
-<!-- El resto del HTML es exactamente el mismo que me pasaste -->
 <div class="bg-blobs">
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
@@ -242,67 +169,60 @@
     <div class="badge">SIN MARCA DE AGUA</div>
   </header>
 
-  <div class="install-banner" id="installBanner">
-    <span class="install-banner-text">📲 <strong>Instala TikDesk</strong> como app gratis</span>
-    <div class="install-banner-actions">
-      <button class="btn-install" id="installBtn">Instalar</button>
-      <button class="btn-install-close" id="installClose">✕</button>
-    </div>
-  </div>
-
-  <div class="ios-tip" id="iosTip">
-    📲 <span>Para instalar en iPhone: pulsa <strong>Compartir ↑</strong> → <strong>Añadir a pantalla de inicio</strong></span>
-  </div>
-
   <section class="hero">
     <div class="hero-eyebrow"><span class="dot"></span> Gratis · Rápido · Sin registro</div>
     <h1>Descarga videos de <em>TikTok, Instagram y YouTube</em></h1>
     <p>Pega el enlace del video y descárgalo en HD en segundos. Sin apps ni límites.</p>
 
-    <div class="card">
-      <div class="input-row">
-        <input class="url-input" id="urlInput" type="text" placeholder="Pega el enlace de TikTok, Instagram o YouTube..." autocomplete="off"/>
-        <button class="btn-download" onclick="handleDownload();" type="button">
-          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24">
-            <path d="M12 3v13M6 11l6 6 6-6"/><path d="M4 20h16"/>
-          </svg>
-          Descargar
-        </button>
-      </div>
+```
+<div class="card">
+  <div class="input-row">
+    <input class="url-input" id="urlInput" type="text" placeholder="Pega el enlace de TikTok, Instagram o YouTube..." autocomplete="off"/>
+    <button class="btn-download" onclick="handleDownload();" type="button">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24">
+        <path d="M12 3v13M6 11l6 6 6-6"/><path d="M4 20h16"/>
+      </svg>
+      Descargar
+    </button>
+  </div>
 
-      <div class="status-msg loading" id="statusLoading">
-        <span class="spin"></span> Procesando video, por favor espera...
-      </div>
-      <div class="status-msg error" id="statusError">
-        <span id="errorText">Por favor pega un enlace válido.</span>
-      </div>
+  <div class="status-msg loading" id="statusLoading">
+    <span class="spin"></span> Procesando video, por favor espera...
+  </div>
+  <div class="status-msg error" id="statusError">
+    <span id="errorText">Por favor pega un enlace válido.</span>
+  </div>
 
-      <div class="result-area" id="resultArea">
-        <div class="video-meta" id="videoMeta">
-          <div class="meta-thumb" id="metaThumb"></div>
-          <div>
-            <div id="platformTag"></div>
-            <div class="meta-title" id="metaTitle">Video</div>
-            <div class="meta-sub" id="metaSub">@usuario</div>
-          </div>
-        </div>
-        <div class="result-actions">
-          <button class="btn-download-format btn-mp4" id="btnMp4">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24">
-              <path d="M12 3v13M6 11l6 6 6-6"/><path d="M4 20h16"/>
-            </svg>
-            Descargar MP4
-          </button>
-          <button class="btn-download-format btn-mp3" id="btnMp3">
-            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24">
-              <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
-            </svg>
-            Solo audio MP3
-          </button>
-        </div>
+  <div class="result-area" id="resultArea">
+    <div class="video-meta" id="videoMeta">
+      <div class="meta-thumb" id="metaThumb"></div>
+      <div>
+        <div id="platformTag"></div>
+        <div class="meta-title" id="metaTitle">Video</div>
+        <div class="meta-sub" id="metaSub">@usuario</div>
       </div>
     </div>
+    <div class="result-actions">
+      <button class="btn-download-format btn-mp4" id="btnMp4">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24">
+          <path d="M12 3v13M6 11l6 6 6-6"/><path d="M4 20h16"/>
+        </svg>
+        Descargar MP4
+      </button>
+      <button class="btn-download-format btn-mp3" id="btnMp3">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24">
+          <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+        </svg>
+        Solo audio MP3
+      </button>
+    </div>
+  </div>
+</div>
+```
+
   </section>
+
+  <!-- Plataformas soportadas -->
 
   <div class="supported">
     <div class="supported-title">PLATAFORMAS SOPORTADAS</div>
@@ -356,67 +276,14 @@
     </div>
   </div>
 
-  <div class="section-title">Preguntas frecuentes</div>
-  <div class="faq">
-    <div class="faq-item">
-      <div class="faq-q">¿Cómo descargar videos de TikTok sin marca de agua?</div>
-      <div class="faq-a">Copia el enlace del video de TikTok, pégalo en el campo de arriba y pulsa Descargar. TikDesk elimina automáticamente la marca de agua y descarga el video en HD.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">¿Es gratis descargar videos de TikTok?</div>
-      <div class="faq-a">Sí, TikDesk es completamente gratis. No necesitas registrarte ni instalar ninguna aplicación. Descarga ilimitada sin coste.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">¿Puedo descargar videos de Instagram y YouTube también?</div>
-      <div class="faq-a">Sí. TikDesk soporta TikTok, Instagram y YouTube. Solo pega el enlace del video y elige tu formato preferido: MP4 o MP3.</div>
-    </div>
-    <div class="faq-item">
-      <div class="faq-q">¿En qué calidad se descargan los videos?</div>
-      <div class="faq-a">Los videos se descargan en la máxima calidad disponible, generalmente HD. TikDesk no reduce la calidad del video original.</div>
-    </div>
-  </div>
-
   <footer>
-    <strong>TikDesk</strong> © 2026 · Descarga videos gratis · <a href="https://tikdesk.xyz" style="color:var(--muted)">tikdesk.xyz</a><br/>
+    <strong>TikDesk</strong> © 2026 · Descarga videos gratis<br/>
     Solo para uso personal. Respeta los derechos de los creadores de contenido.
   </footer>
 </div>
 
 <script>
-  // Tu JavaScript completo (sin cambios)
   const API = 'https://tikdesk-backend.onrender.com';
-
-  let deferredPrompt = null;
-  const isIOS = /iphone|ipad|ipod/i.test(navigator.userAgent);
-  const isInStandaloneMode = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
-
-  if (isIOS && !isInStandaloneMode) {
-    document.getElementById('iosTip').classList.add('visible');
-  }
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-    document.getElementById('installBanner').classList.add('visible');
-  });
-
-  document.getElementById('installBtn').addEventListener('click', async () => {
-    if (deferredPrompt) {
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      deferredPrompt = null;
-      document.getElementById('installBanner').classList.remove('visible');
-    }
-  });
-
-  document.getElementById('installClose').addEventListener('click', () => {
-    document.getElementById('installBanner').classList.remove('visible');
-  });
-
-  window.addEventListener('appinstalled', () => {
-    document.getElementById('installBanner').classList.remove('visible');
-    document.getElementById('iosTip').classList.remove('visible');
-  });
 
   function getPlatform(url) {
     if (/tiktok\.com|vm\.tiktok\.com|vt\.tiktok\.com/i.test(url)) return 'tiktok';
