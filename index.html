@@ -12,13 +12,13 @@
 
 ```
 :root {
-  --bg: #0a0a0f;
-  --card: #13131a;
-  --border: #22223a;
-  --accent: #ff2d55;
-  --accent2: #ff6b35;
-  --text: #f0f0f5;
-  --muted: #6b6b85;
+  --bg: #0d0a14;
+  --card: #160f22;
+  --border: #2e1a42;
+  --accent: #e040fb;
+  --accent2: #b06fe3;
+  --text: #f5eeff;
+  --muted: #9b80b8;
 }
 
 body {
@@ -36,9 +36,9 @@ body {
 .blob {
   position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.18;
 }
-.blob-1 { width: 400px; height: 400px; background: var(--accent); top: -100px; left: -100px; animation: drift1 12s ease-in-out infinite alternate; }
-.blob-2 { width: 300px; height: 300px; background: #7c3aed; bottom: -80px; right: -80px; animation: drift2 14s ease-in-out infinite alternate; }
-.blob-3 { width: 200px; height: 200px; background: var(--accent2); top: 50%; left: 50%; transform: translate(-50%,-50%); animation: drift3 10s ease-in-out infinite alternate; }
+.blob-1 { width: 400px; height: 400px; background: #e040fb; top: -100px; left: -100px; animation: drift1 12s ease-in-out infinite alternate; }
+.blob-2 { width: 300px; height: 300px; background: #7b2ff7; bottom: -80px; right: -80px; animation: drift2 14s ease-in-out infinite alternate; }
+.blob-3 { width: 200px; height: 200px; background: #ce93d8; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: drift3 10s ease-in-out infinite alternate; }
 
 @keyframes drift1 { to { transform: translate(40px, 60px); } }
 @keyframes drift2 { to { transform: translate(-40px, -50px); } }
@@ -76,7 +76,7 @@ header {
 }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(255,45,85,0.12); border: 1px solid rgba(255,45,85,0.3);
+  background: rgba(224,64,251,0.12); border: 1px solid rgba(224,64,251,0.3);
   color: var(--accent); font-size: 0.78rem; font-weight: 500;
   padding: 5px 14px; border-radius: 20px; margin-bottom: 20px;
 }
@@ -170,7 +170,7 @@ header {
 }
 .status-msg.show { display: flex; align-items: center; gap: 8px; }
 .status-msg.loading { background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent2); }
-.status-msg.error { background: rgba(255,45,85,0.1); border: 1px solid rgba(255,45,85,0.3); color: var(--accent); }
+.status-msg.error { background: rgba(224,64,251,0.1); border: 1px solid rgba(224,64,251,0.3); color: var(--accent); }
 .spin { width: 14px; height: 14px; border: 2px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: spin 0.7s linear infinite; flex-shrink: 0; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
