@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
@@ -10,215 +9,142 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-```
-:root {
-  --bg: #0d0a14;
-  --card: #160f22;
-  --border: #2e1a42;
-  --accent: #e040fb;
-  --accent2: #b06fe3;
-  --text: #f5eeff;
-  --muted: #9b80b8;
-}
+    :root {
+      --bg: #f8f5ff;
+      --card: #ffffff;
+      --border: #e0bbff;
+      --accent: #a855f7;
+      --accent2: #c026d3;
+      --text: #4c1d95;
+      --muted: #6b21a8;
+    }
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100vh;
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
 
-/* Background blobs */
-.bg-blobs {
-  position: fixed; inset: 0; pointer-events: none; z-index: 0;
-}
-.blob {
-  position: absolute; border-radius: 50%; filter: blur(100px); opacity: 0.18;
-}
-.blob-1 { width: 400px; height: 400px; background: #e040fb; top: -100px; left: -100px; animation: drift1 12s ease-in-out infinite alternate; }
-.blob-2 { width: 300px; height: 300px; background: #7b2ff7; bottom: -80px; right: -80px; animation: drift2 14s ease-in-out infinite alternate; }
-.blob-3 { width: 200px; height: 200px; background: #ce93d8; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: drift3 10s ease-in-out infinite alternate; }
+    .bg-blobs {
+      position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    }
+    .blob { position: absolute; border-radius: 50%; filter: blur(110px); opacity: 0.10; }
+    .blob-1 { width: 500px; height: 500px; background: #c084fc; top: -150px; left: -150px; }
+    .blob-2 { width: 380px; height: 380px; background: #a855f7; bottom: -120px; right: -120px; }
+    .blob-3 { width: 300px; height: 300px; background: #d8b4fe; top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-@keyframes drift1 { to { transform: translate(40px, 60px); } }
-@keyframes drift2 { to { transform: translate(-40px, -50px); } }
-@keyframes drift3 { to { transform: translate(-50%, -60%); } }
+    .wrapper {
+      position: relative; z-index: 1;
+      max-width: 720px; margin: 0 auto; padding: 0 20px;
+    }
 
-/* Layout */
-.wrapper {
-  position: relative; z-index: 1;
-  max-width: 680px; margin: 0 auto; padding: 0 20px;
-}
+    /* Header y Hero (mantengo igual que antes) */
+    header { display: flex; align-items: center; justify-content: space-between; padding: 28px 0 0; }
+    .logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.85rem; background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .logo span { -webkit-text-fill-color: var(--text); }
+    .badge { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; font-size: 0.78rem; font-weight: 500; padding: 6px 14px; border-radius: 9999px; }
 
-/* Header */
-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 24px 0 0;
-  animation: fadeDown 0.6s ease both;
-}
-.logo {
-  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.6rem;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-  background-clip: text; letter-spacing: -0.5px;
-}
-.logo span { -webkit-text-fill-color: var(--text); }
-.badge {
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color: #fff; font-size: 0.7rem; font-weight: 500;
-  padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px;
-}
+    .hero { text-align: center; padding: 90px 0 70px; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(168,85,247,0.1); border: 1px solid rgba(168,85,247,0.25); color: var(--accent); font-size: 0.85rem; font-weight: 500; padding: 7px 18px; border-radius: 9999px; margin-bottom: 28px; }
+    .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); animation: pulse 1.8s infinite; }
 
-/* Hero */
-.hero {
-  text-align: center; padding: 64px 0 48px;
-  animation: fadeUp 0.7s ease 0.1s both;
-}
-.hero-eyebrow {
-  display: inline-flex; align-items: center; gap: 6px;
-  background: rgba(224,64,251,0.12); border: 1px solid rgba(224,64,251,0.3);
-  color: var(--accent); font-size: 0.78rem; font-weight: 500;
-  padding: 5px 14px; border-radius: 20px; margin-bottom: 20px;
-}
-.dot { width: 6px; height: 6px; border-radius: 50%; background: var(--accent); animation: pulse 1.5s ease infinite; }
-@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(0.7)} }
+    .hero h1 { font-family: 'Syne', sans-serif; font-weight: 800; font-size: clamp(2.3rem, 7.5vw, 3.6rem); line-height: 1.05; letter-spacing: -1.5px; margin-bottom: 20px; color: #4c1d95; }
+    .hero h1 em { font-style: normal; background: linear-gradient(90deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .hero p { color: var(--muted); font-size: 1.1rem; max-width: 480px; margin: 0 auto 40px; }
 
-.hero h1 {
-  font-family: 'Syne', sans-serif; font-weight: 800;
-  font-size: clamp(2rem, 8vw, 3.2rem); line-height: 1.1;
-  letter-spacing: -1px; margin-bottom: 16px;
-}
-.hero h1 em {
-  font-style: normal;
-  background: linear-gradient(90deg, var(--accent), var(--accent2));
-  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
-}
-.hero p {
-  color: var(--muted); font-size: 1rem; line-height: 1.6; max-width: 420px; margin: 0 auto;
-}
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 28px; padding: 32px 28px; box-shadow: 0 25px 50px -15px rgba(168,85,247,0.15); }
+    .input-row { display: flex; gap: 14px; flex-wrap: wrap; }
+    .url-input { flex: 1; min-width: 280px; background: #fff; border: 2px solid var(--border); color: var(--text); font-size: 1.05rem; padding: 18px 22px; border-radius: 18px; outline: none; transition: all 0.3s; }
+    .url-input:focus { border-color: var(--accent); box-shadow: 0 0 0 5px rgba(168,85,247,0.18); }
+    .url-input::placeholder { color: #9b80b8; }
 
-/* Download card */
-.card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 20px; padding: 28px;
-  animation: fadeUp 0.7s ease 0.2s both;
-  margin-bottom: 32px;
-}
-.input-row {
-  display: flex; gap: 10px; flex-wrap: wrap;
-}
-.url-input {
-  flex: 1; min-width: 0;
-  background: var(--bg); border: 1.5px solid var(--border);
-  color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 0.95rem;
-  padding: 14px 16px; border-radius: 12px; outline: none;
-  transition: border-color 0.2s;
-}
-.url-input::placeholder { color: var(--muted); }
-.url-input:focus { border-color: var(--accent); }
+    .btn-download {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff; font-weight: 600; font-size: 1.05rem; padding: 18px 32px; border-radius: 18px;
+      cursor: pointer; border: none; white-space: nowrap; display: flex; align-items: center; gap: 10px;
+      box-shadow: 0 10px 25px -5px rgba(168,85,247,0.45); transition: all 0.3s;
+    }
+    .btn-download:hover { transform: translateY(-4px); box-shadow: 0 15px 30px -5px rgba(168,85,247,0.55); }
 
-.btn-download {
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  color: #fff; font-family: 'DM Sans', sans-serif; font-weight: 500;
-  font-size: 0.95rem; border: none; padding: 14px 24px;
-  border-radius: 12px; cursor: pointer; white-space: nowrap;
-  transition: opacity 0.2s, transform 0.15s;
-  display: flex; align-items: center; gap: 8px;
-}
-.btn-download:hover { opacity: 0.88; transform: translateY(-1px); }
-.btn-download:active { transform: scale(0.97); }
+    /* === PARTE INFERIOR - EXACTAMENTE COMO EN TU IMAGEN === */
+    .features {
+      margin: 90px 0 70px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+    .feat {
+      background: transparent;
+    }
+    .feat-icon {
+      width: 70px; height: 70px;
+      margin: 0 auto 16px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2.8rem;
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(168,85,247,0.12);
+    }
+    .feat-title { font-size: 1.1rem; font-weight: 600; margin-bottom: 6px; color: var(--text); }
+    .feat-desc { font-size: 0.92rem; color: var(--muted); line-height: 1.5; }
 
-/* Result area */
-.result-area {
-  margin-top: 20px; display: none;
-}
-.result-area.visible { display: block; animation: fadeUp 0.4s ease both; }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-weight: 700;
+      font-size: 1.8rem;
+      text-align: center;
+      margin: 80px 0 40px;
+      color: #4c1d95;
+    }
 
-.result-video {
-  width: 100%; border-radius: 12px; background: #000;
-  max-height: 340px; display: block;
-}
-.result-actions {
-  display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap;
-}
-.btn-action {
-  flex: 1; padding: 12px; border-radius: 10px; font-family: 'DM Sans', sans-serif;
-  font-size: 0.9rem; font-weight: 500; cursor: pointer; border: none;
-  transition: opacity 0.2s, transform 0.15s; text-align: center;
-  text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 6px;
-}
-.btn-action:hover { opacity: 0.85; transform: translateY(-1px); }
-.btn-mp4 { background: linear-gradient(135deg, var(--accent), var(--accent2)); color: #fff; }
-.btn-mp3 { background: var(--border); color: var(--text); }
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+      margin-bottom: 90px;
+    }
+    .step {
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    .step-num {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Syne', sans-serif;
+      font-weight: 800;
+      font-size: 1.4rem;
+    }
+    .step-content strong {
+      display: block;
+      font-size: 1.15rem;
+      margin-bottom: 8px;
+      color: var(--text);
+    }
+    .step-content span {
+      font-size: 0.95rem;
+      color: var(--muted);
+      line-height: 1.55;
+    }
 
-.video-meta {
-  display: flex; align-items: center; gap: 12px; margin-bottom: 14px;
-  padding: 12px; background: var(--bg); border-radius: 10px;
-}
-.meta-thumb {
-  width: 48px; height: 48px; border-radius: 8px; object-fit: cover; background: var(--border);
-  flex-shrink: 0;
-}
-.meta-title { font-size: 0.88rem; color: var(--text); font-weight: 500; line-height: 1.4; }
-.meta-sub { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    footer {
+      padding: 60px 0 50px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
 
-/* Status message */
-.status-msg {
-  margin-top: 14px; padding: 12px 16px; border-radius: 10px;
-  font-size: 0.88rem; display: none;
-}
-.status-msg.show { display: flex; align-items: center; gap: 8px; }
-.status-msg.loading { background: rgba(255,107,53,0.1); border: 1px solid rgba(255,107,53,0.3); color: var(--accent2); }
-.status-msg.error { background: rgba(224,64,251,0.1); border: 1px solid rgba(224,64,251,0.3); color: var(--accent); }
-.spin { width: 14px; height: 14px; border: 2px solid currentColor; border-top-color: transparent; border-radius: 50%; animation: spin 0.7s linear infinite; flex-shrink: 0; }
-@keyframes spin { to { transform: rotate(360deg); } }
-
-/* Features */
-.features {
-  display: grid; grid-template-columns: repeat(3,1fr); gap: 12px;
-  animation: fadeUp 0.7s ease 0.3s both; margin-bottom: 48px;
-}
-.feat {
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 14px; padding: 18px 14px; text-align: center;
-}
-.feat-icon { font-size: 1.6rem; margin-bottom: 8px; }
-.feat-title { font-size: 0.82rem; font-weight: 500; margin-bottom: 4px; }
-.feat-desc { font-size: 0.74rem; color: var(--muted); line-height: 1.4; }
-
-/* How to */
-.section-title {
-  font-family: 'Syne', sans-serif; font-weight: 700; font-size: 1.3rem;
-  margin-bottom: 16px; animation: fadeUp 0.7s ease 0.35s both;
-}
-.steps { display: flex; flex-direction: column; gap: 12px; margin-bottom: 48px; animation: fadeUp 0.7s ease 0.4s both; }
-.step {
-  display: flex; align-items: flex-start; gap: 14px;
-  background: var(--card); border: 1px solid var(--border);
-  border-radius: 14px; padding: 16px;
-}
-.step-num {
-  width: 32px; height: 32px; border-radius: 50%; flex-shrink: 0;
-  background: linear-gradient(135deg, var(--accent), var(--accent2));
-  display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif; font-weight: 800; font-size: 0.9rem;
-}
-.step-text strong { display: block; font-size: 0.9rem; margin-bottom: 2px; }
-.step-text span { font-size: 0.82rem; color: var(--muted); }
-
-/* Footer */
-footer {
-  border-top: 1px solid var(--border); padding: 24px 0;
-  text-align: center; color: var(--muted); font-size: 0.78rem;
-  animation: fadeUp 0.7s ease 0.45s both;
-}
-footer strong { color: var(--text); }
-
-@keyframes fadeUp { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
-@keyframes fadeDown { from { opacity:0; transform: translateY(-16px); } to { opacity:1; transform: translateY(0); } }
-```
-
+    @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
   </style>
 </head>
 <body>
@@ -230,7 +156,6 @@ footer strong { color: var(--text); }
 </div>
 
 <div class="wrapper">
-
   <header>
     <div class="logo">Tik<span>Desk</span></div>
     <div class="badge">SIN MARCA DE AGUA</div>
@@ -239,50 +164,43 @@ footer strong { color: var(--text); }
   <section class="hero">
     <div class="hero-eyebrow"><span class="dot"></span> Gratis · Rápido · Sin registro</div>
     <h1>Descarga videos de TikTok <em>sin marca de agua</em></h1>
-    <p>Pega el enlace del video, elige el formato y descárgalo en segundos. Sin apps, sin límites.</p>
+    <p>Pega el enlace del video y descárgalo en HD en segundos. Sin apps ni límites.</p>
+
+    <div class="card">
+      <div class="input-row">
+        <input class="url-input" id="urlInput" type="text" placeholder="Pega aquí el enlace del video de TikTok..." autocomplete="off"/>
+        <button class="btn-download" onclick="handleDownload();" type="button">
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.8" viewBox="0 0 24 24">
+            <path d="M12 3v13M6 11l6 6 6-6"/><path d="M4 20h16"/>
+          </svg>
+          Descargar
+        </button>
+      </div>
+
+      <div class="status-msg loading" id="statusLoading">
+        <span class="spin"></span> Procesando video, por favor espera...
+      </div>
+      <div class="status-msg error" id="statusError">
+        <span id="errorText">Por favor pega un enlace válido de TikTok.</span>
+      </div>
+
+      <div class="result-area" id="resultArea">
+        <div class="video-meta" id="videoMeta">
+          <div class="meta-thumb" id="metaThumb"></div>
+          <div>
+            <div class="meta-title" id="metaTitle">Video de TikTok</div>
+            <div class="meta-sub" id="metaSub">@usuario · TikTok</div>
+          </div>
+        </div>
+        <div class="result-actions">
+          <a class="btn-action btn-mp4" id="btnMp4" href="#" download>Descargar MP4</a>
+          <a class="btn-action btn-mp3" id="btnMp3" href="#" download>Solo audio MP3</a>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <div class="card">
-    <div class="input-row">
-      <input class="url-input" id="urlInput" type="text" placeholder="Pega el enlace del video aquí..." autocomplete="off"/>
-      <button class="btn-download" onclick="handleDownload();" type="button">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 3v13M6 11l6 6 6-6"/><path d="M4 20h16"/></svg>
-        Descargar
-      </button>
-    </div>
-
-```
-<div class="status-msg loading" id="statusLoading">
-  <span class="spin"></span> Procesando video, por favor espera...
-</div>
-<div class="status-msg error" id="statusError">
-  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
-  <span id="errorText">Por favor pega un enlace válido de TikTok.</span>
-</div>
-
-<div class="result-area" id="resultArea">
-  <div class="video-meta" id="videoMeta">
-    <div class="meta-thumb" id="metaThumb" style="background:var(--border);"></div>
-    <div>
-      <div class="meta-title" id="metaTitle">Video de TikTok</div>
-      <div class="meta-sub" id="metaSub">@usuario · TikTok</div>
-    </div>
-  </div>
-  <div class="result-actions">
-    <a class="btn-action btn-mp4" id="btnMp4" href="#" download>
-      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M12 3v13M6 11l6 6 6-6"/><path d="M4 20h16"/></svg>
-      Descargar MP4
-    </a>
-    <a class="btn-action btn-mp3" id="btnMp3" href="#" download>
-      <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-      Solo audio MP3
-    </a>
-  </div>
-</div>
-```
-
-  </div>
-
+  <!-- Features como en tu imagen -->
   <div class="features">
     <div class="feat">
       <div class="feat-icon">🚫</div>
@@ -301,25 +219,26 @@ footer strong { color: var(--text); }
     </div>
   </div>
 
+  <!-- Cómo funciona - Exacto como en la imagen -->
   <div class="section-title">¿Cómo funciona?</div>
   <div class="steps">
     <div class="step">
       <div class="step-num">1</div>
-      <div class="step-text">
+      <div class="step-content">
         <strong>Copia el enlace del video</strong>
         <span>Abre TikTok, pulsa "Compartir" y luego "Copiar enlace"</span>
       </div>
     </div>
     <div class="step">
       <div class="step-num">2</div>
-      <div class="step-text">
+      <div class="step-content">
         <strong>Pégalo arriba y pulsa Descargar</strong>
         <span>TikDesk procesará el video automáticamente</span>
       </div>
     </div>
     <div class="step">
       <div class="step-num">3</div>
-      <div class="step-text">
+      <div class="step-content">
         <strong>Elige MP4 o MP3 y listo</strong>
         <span>El archivo se guardará en tu dispositivo sin marca de agua</span>
       </div>
@@ -327,13 +246,13 @@ footer strong { color: var(--text); }
   </div>
 
   <footer>
-    <strong>TikDesk</strong> &copy; 2025 · Descargador de TikTok gratuito<br/>
-    <span style="margin-top:6px;display:block;">Solo para uso personal. Respeta los derechos de los creadores de contenido.</span>
+    <strong>TikDesk</strong> © 2026 · Descargador de TikTok gratuito<br/>
+    Solo para uso personal. Respeta los derechos de los creadores de contenido.
   </footer>
-
 </div>
 
 <script>
+  // Tu JavaScript completo (sin cambios)
   const API = 'https://tikdesk-backend.onrender.com';
 
   function isValidTikTokUrl(url) {
@@ -384,15 +303,13 @@ footer strong { color: var(--text); }
         document.getElementById('metaThumb').style.backgroundSize = 'cover';
       }
 
-      // Botones apuntan al endpoint de descarga
-      const mp4Url = `${API}/api/download`;
       document.getElementById('btnMp4').onclick = (e) => { e.preventDefault(); triggerDownload(url, 'mp4'); };
       document.getElementById('btnMp3').onclick = (e) => { e.preventDefault(); triggerDownload(url, 'mp3'); };
 
       resultArea.classList.add('visible');
 
     } catch (err) {
-      document.getElementById('errorText').textContent = 'Error de conexión. El servidor puede estar iniciando, intenta en 30 segundos.';
+      document.getElementById('errorText').textContent = 'Error de conexión. Intenta en 30 segundos.';
       showStatus('Error');
     }
   }
