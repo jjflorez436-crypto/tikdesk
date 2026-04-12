@@ -216,7 +216,8 @@
     @keyframes spin { to { transform: rotate(360deg); } }
     @keyframes fadeUp { from { opacity:0; transform: translateY(16px); } to { opacity:1; transform: translateY(0); } }
   </style>
-</head>
+ <link rel="manifest" href="/manifest.json">
+<script>if("serviceWorker" in navigator){navigator.serviceWorker.register("/sw.js")}</script></head>
 <body>
 
 <!-- El resto del HTML se mantiene igual que el que me pasaste -->
