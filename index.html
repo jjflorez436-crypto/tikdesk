@@ -7,206 +7,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
     :root {
-      --bg: #1a1030;
-      --card-bg: #120d24;
-      --accent: #5b5ef4;
-      --accent2: #7c7fff;
-      --border: #2e2550;
-      --text: #ffffff;
-      --muted: #8888bb;
-      --banner-bg: #0f0a22;
+      --bg: #1a1030; --card-bg: #120d24; --accent: #5b5ef4; --accent2: #7c7fff;
+      --border: #2e2550; --text: #ffffff; --muted: #8888bb; --banner-bg: #0f0a22;
     }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; overflow-x: hidden; }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: 'Inter', sans-serif;
-      min-height: 100vh;
-      overflow-x: hidden;
-    }
-
-    .ticker-wrap {
-      background: var(--banner-bg);
-      border-bottom: 1px solid var(--border);
-      padding: 12px 0;
-      white-space: nowrap;
-      overflow: hidden;
-    }
-    .ticker-track {
-      display: inline-block;
-      animation: ticker 22s linear infinite;
-    }
-    .ticker-track span {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 1.3rem;
-      font-weight: 900;
-      letter-spacing: 0.18em;
-      color: var(--accent2);
-      text-transform: uppercase;
-      padding: 0 35px;
-    }
+    .ticker-wrap { background: var(--banner-bg); border-bottom: 1px solid var(--border); padding: 12px 0; white-space: nowrap; overflow: hidden; }
+    .ticker-track { display: inline-block; animation: ticker 22s linear infinite; }
+    .ticker-track span { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 900; letter-spacing: 0.18em; color: var(--accent2); padding: 0 35px; }
     @keyframes ticker { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-    .container {
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 20px 16px 100px;
-    }
-
-    .entry {
-      margin-bottom: 22px;
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      overflow: hidden;
-      background: var(--card-bg);
-    }
-
-    .entry-img-wrap {
-      width: 100%;
-      aspect-ratio: 4/3;
-      overflow: hidden;
-      background: #1e1640;
-      position: relative;
-      cursor: pointer;
-    }
-    .entry-img-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
+    .container { max-width: 480px; margin: 0 auto; padding: 20px 16px 100px; }
+    .entry { margin-bottom: 22px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: var(--card-bg); }
+    .entry-img-wrap { width: 100%; aspect-ratio: 4/3; overflow: hidden; background: #1e1640; cursor: pointer; }
+    .entry-img-wrap img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
     .entry-img-wrap:hover img { transform: scale(1.05); }
 
-    .entry-link-row {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 16px;
-      border-top: 1px solid var(--border);
-      text-decoration: none;
-      color: var(--accent2);
-    }
+    .entry-link-row { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-top: 1px solid var(--border); text-decoration: none; color: var(--accent2); }
     .entry-link-row:hover { background: rgba(91,94,244,0.1); }
-
     .entry-thumb { width: 46px; height: 46px; border-radius: 6px; object-fit: cover; flex-shrink: 0; }
-    .entry-thumb-placeholder { width: 46px; height: 46px; border-radius: 6px; background: #2a1f5a; flex-shrink: 0; }
 
-    .entry-url {
-      flex: 1;
-      font-size: 0.8rem;
-      font-weight: 500;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-    }
+    .ad-container { margin: 20px 0; text-align: center; padding: 10px 0; border-top: 1px dashed #3a2f6a; border-bottom: 1px dashed #3a2f6a; }
+    .vertical-ad { margin: 15px auto; max-width: 160px; }
 
-    /* ANUNCIOS */
-    .ad-container {
-      margin: 20px 0;
-      text-align: center;
-      padding: 8px 0;
-      border-top: 1px dashed #3a2f6a;
-      border-bottom: 1px dashed #3a2f6a;
-    }
-
-    .vertical-ad {
-      margin: 15px auto;
-      max-width: 160px;
-    }
-
-    .admin-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: var(--accent);
-      color: white;
-      border: none;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      font-size: 1.6rem;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-      z-index: 1000;
-      cursor: pointer;
-    }
-
-    .img-placeholder {
-      width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center;
-      color: var(--muted); font-size: 0.85rem; background: linear-gradient(135deg, #1a1440, #2a1f5a);
-    }
+    .admin-btn { position: fixed; bottom: 20px; right: 20px; background: #5b5ef4; color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 1.6rem; box-shadow: 0 5px 20px rgba(0,0,0,0.5); z-index: 1000; cursor: pointer; }
   </style>
 </head>
 <body>
 
-<!-- TICKER -->
 <div class="ticker-wrap">
   <div class="ticker-track">
     <span>EL RINCONCITO</span><span>EL RINCONCITO</span><span>EL RINCONCITO</span>
-    <span>EL RINCONCITO</span><span>EL RINCONCITO</span>
   </div>
 </div>
 
 <div class="container">
 
-  <!-- ANUNCIO 1 - TOP (Muy visible) -->
+  <!-- ANUNCIO SUPERIOR -->
   <div class="ad-container">
     <script async="async" data-cfasync="false" src="https://peacefullymotive.com/dfbb47bfcdceb75591dd3b9a1d2f2449/invoke.js"></script>
     <div id="container-dfbb47bfcdceb75591dd3b9a1d2f2449"></div>
   </div>
 
-  <p style="text-align:center; margin:15px 0 25px; opacity:0.8; font-size:0.9rem;">
-    Toca la imagen para ir al post
-  </p>
-
   <div id="entries"></div>
 
-  <!-- ANUNCIO 2 - MEDIO (Vertical) -->
+  <!-- ANUNCIO VERTICAL -->
   <div class="ad-container">
     <div class="vertical-ad">
       <script>
-        atOptions = {
-          'key' : '96e8e51e92d0edf6bd3f0a2dd004f22c',
-          'format' : 'iframe',
-          'height' : 300,
-          'width' : 160,
-          'params' : {}
-        };
+        atOptions = {'key':'96e8e51e92d0edf6bd3f0a2dd004f22c','format':'iframe','height':300,'width':160,'params':{}};
       </script>
       <script src="https://peacefullymotive.com/96e8e51e92d0edf6bd3f0a2dd004f22c/invoke.js"></script>
     </div>
   </div>
-
 </div>
 
-<!-- Botón ADMIN -->
 <button class="admin-btn" id="adminBtn">✏️</button>
-
-<!-- PANEL DE EDICIÓN -->
-<div class="edit-overlay" id="editOverlay">
-  <div class="edit-box" style="background:#1e1640; border:1px solid #2e2550; border-radius:14px; padding:24px; width:100%; max-width:420px;">
-    <h3>✏️ Editar entrada</h3>
-    <label>Foto</label>
-    <label class="file-btn" id="fileBtnLabel" style="display:block; background:#2a1f5a; border:1px dashed #5b5ef4; padding:14px; text-align:center; border-radius:8px; cursor:pointer;">📷 Elegir imagen</label>
-    <input type="file" id="fileInput" accept="image/*" style="display:none;" />
-
-    <button id="btnDeleteImage" style="background:#c42; color:white; border:none; padding:10px; border-radius:6px; width:100%; margin:10px 0; cursor:pointer; display:none;">🗑️ Borrar imagen</button>
-
-    <label>Enlace</label>
-    <input type="url" id="urlInput" style="width:100%; padding:10px; background:#120d24; border:1px solid #2e2550; border-radius:8px; color:white;" />
-
-    <label>Texto (opcional)</label>
-    <input type="text" id="textInput" style="width:100%; padding:10px; background:#120d24; border:1px solid #2e2550; border-radius:8px; color:white;" />
-
-    <div style="margin-top:20px; display:flex; gap:10px;">
-      <button id="btnCancel" style="flex:1; padding:12px; background:transparent; border:1px solid #2e2550; color:#8888bb; border-radius:8px;">Cancelar</button>
-      <button id="btnSave" style="flex:1; padding:12px; background:#5b5ef4; color:white; border:none; border-radius:8px;">Guardar</button>
-    </div>
-  </div>
-</div>
 
 <script>
   const links = [
@@ -220,6 +77,12 @@
     "https://jonyflixx.blogspot.com/2026/05/se-pudo-hacer-posible.html",
     "https://jonyflixx.blogspot.com/2026/05/lo-hizo-de-nuevo-y-lo-logro.html",
     "https://jonyflixx.blogspot.com/2026/05/lo-logro-por-que-insistio.html"
+  ];
+
+  const imageNames = [
+    "IMG_1390.jpeg", "IMG_1389.jpeg", "IMG_1388.jpeg", "IMG_1387.jpeg",
+    "IMG_1386.jpeg", "IMG_1385.jpeg", "IMG_1384.jpeg", "IMG_1383.jpeg",
+    "IMG_1382.jpeg", "IMG_1381.jpeg"
   ];
 
   let isAdminMode = false;
@@ -236,17 +99,17 @@
 
     for (let i = 0; i < 10; i++) {
       const entry = data[i] || {};
-      const imgSrc = entry.image || '';
+      const imgSrc = entry.image || `https://raw.githubusercontent.com/jjflorez436-crypto/tikdesk/main/${imageNames[i]}`;
       const url = entry.url || links[i];
 
       const div = document.createElement('div');
       div.className = 'entry';
       div.innerHTML = `
         <div class="entry-img-wrap" data-index="${i}">
-          ${imgSrc ? `<img src="${imgSrc}" alt="Entrada ${i+1}">` : `<div class="img-placeholder"><span>Toca para ver el post</span></div>`}
+          <img src="${imgSrc}" alt="Entrada ${i+1}">
         </div>
         <a class="entry-link-row" href="${url}" target="_blank" rel="noopener">
-          ${imgSrc ? `<img class="entry-thumb" src="${imgSrc}">` : `<div class="entry-thumb-placeholder"></div>`}
+          <img class="entry-thumb" src="${imgSrc}">
           <span class="entry-url">ENTRADA ${i+1}</span>
           <span class="entry-arrow">→</span>
         </a>
@@ -254,14 +117,13 @@
 
       div.querySelector('.entry-img-wrap').addEventListener('click', () => {
         if (isAdminMode) openEdit(i);
-        else if (url) window.open(url, '_blank');
+        else window.open(url, '_blank');
       });
 
       container.appendChild(div);
     }
   }
 
-  // Admin Mode
   document.getElementById('adminBtn').addEventListener('click', () => {
     isAdminMode = !isAdminMode;
     const btn = document.getElementById('adminBtn');
@@ -269,62 +131,6 @@
     btn.style.background = isAdminMode ? '#ff2d55' : '#5b5ef4';
   });
 
-  function openEdit(i) {
-    currentIndex = i;
-    const data = getData();
-    const entry = data[i] || {};
-    document.getElementById('urlInput').value = entry.url || links[i];
-    document.getElementById('textInput').value = entry.text || '';
-    document.getElementById('fileBtnLabel').textContent = entry.image ? '✅ Cambiar imagen' : '📷 Elegir imagen';
-    document.getElementById('btnDeleteImage').style.display = entry.image ? 'block' : 'none';
-    document.getElementById('editOverlay').classList.add('open');
-  }
-
-  // File handling
-  document.getElementById('fileInput').addEventListener('change', e => {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = ev => {
-      tempImageData = ev.target.result;
-      document.getElementById('fileBtnLabel').textContent = '✅ ' + file.name;
-    };
-    reader.readAsDataURL(file);
-  });
-
-  document.getElementById('btnSave').addEventListener('click', () => {
-    const data = getData();
-    if (!data[currentIndex]) data[currentIndex] = {};
-    data[currentIndex].url = document.getElementById('urlInput').value.trim();
-    data[currentIndex].text = document.getElementById('textInput').value.trim();
-    if (tempImageData) data[currentIndex].image = tempImageData;
-    saveData(data);
-    closeEdit();
-    renderEntries();
-  });
-
-  document.getElementById('btnDeleteImage').addEventListener('click', () => {
-    if (confirm('¿Eliminar imagen?')) {
-      const data = getData();
-      if (data[currentIndex]) delete data[currentIndex].image;
-      saveData(data);
-      closeEdit();
-      renderEntries();
-    }
-  });
-
-  function closeEdit() {
-    document.getElementById('editOverlay').classList.remove('open');
-    currentIndex = null;
-    tempImageData = null;
-  }
-
-  document.getElementById('btnCancel').addEventListener('click', closeEdit);
-  document.getElementById('editOverlay').addEventListener('click', e => {
-    if (e.target.id === 'editOverlay') closeEdit();
-  });
-
-  // Inicializar
   renderEntries();
 </script>
 </body>
